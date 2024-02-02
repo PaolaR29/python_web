@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multiple Panels Demo</title>
+    <style>
+        .panel {
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Irradiation and Temperature</h1>
+    <form method="post">
+        <div class="panel">
+            <label for="irradiation">Irradiation:</label>
+            <input type="number" id="irradiation" name="irradiation" step="0.01" required>
+        </div>
+        <div class="panel">
+            <label for="temperature">Temperature:</label>
+            <input type="number" id="temperature" name="temperature" step="0.1" required>
+        </div>
+        <div class="panel">
+            <input type="submit" value="Calculate">
+        </div>
+    </form>
+
+    {% if max_power %}
+    <div class="panel">
+        <h2>Maximum Power: {{ max_power }}</h2>
+    </div>
+    <div class="panel">
+        <!-- Add your graph-related content here -->
+    </div>
+    <div class="panel">
+        <!-- Add another panel with relevant values here -->
+    </div>
+    {% endif %}
+</body>
+</html>
