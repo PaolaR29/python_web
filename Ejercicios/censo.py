@@ -23,7 +23,7 @@ for i in range(500_000):
 		print("Creados", len(censo), "registros")
 
 print("Censo creado.")
-print("Ultimo registro: ", censo[-1])
+print("Último registro: ", censo[-1])
 
 def busqueda_numero(lista, elemento):
 	'''Busca registros por numero. Busqueda binaria'''
@@ -65,13 +65,11 @@ def muestra_registro(registro):
 		print("Edad:", registro[2])
 		print("Impuestos:", registro[3])
 
-
-
 def menu():
 
 	print("--------------------------")
-	print("- CENSO DE POBLACION -")
-	print("1. Buscar por numero")
+	print("- CENSO DE POBLACIÓN -")
+	print("1. Buscar por número")
 	print("2. Buscar por nombre")
 	print("3. Salir")
 
